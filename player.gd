@@ -10,3 +10,9 @@ func _physics_process(delta):
 	)
 	velocity = direction * 600
 	move_and_slide()
+	
+	var boo = %HappyBoo
+	if velocity.length() > 0:
+		boo.play_walk_animation()
+	else:
+		boo.play_idle_animation()
