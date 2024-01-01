@@ -1,6 +1,7 @@
 extends Node2D
 
 var mob_scene = preload("res://mob.tscn")
+var tree_scene = preload("res://tree.tscn")
 
 func spawn_mob():
 	var mob = mob_scene.instantiate()
@@ -9,8 +10,16 @@ func spawn_mob():
 	mob.global_position = mob_position.global_position
 	add_child(mob)	
 
+func spawn_tree():
+	var tree = tree_scene.instantiate()
+	var tree_position = %PathFollow2D
+	tree_position.progress_ratio = randf()
+	tree.global_position = tree_position.global_position
+	add_child(tree)	
+
 func _on_timer_timeout():
 	spawn_mob()
+	spawn_tree()
 
 
 func _on_player_health_depleted():

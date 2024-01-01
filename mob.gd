@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health = 100
+var health = 10
 @onready var player = get_node("/root/Game/Player")
 @onready var slime = %Slime
 const smoke_scene = preload("res://smoke_explosion/smoke_explosion.tscn")
@@ -17,7 +17,7 @@ func _physics_process(delta):
 
 func take_damage():
 	slime.play_hurt()
-	health -= 10
+	health -= 3
 	if health <= 0:
 		queue_free()
 		var smoke = smoke_scene.instantiate()

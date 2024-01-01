@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmncl68xnkey7"]
+[gd_scene load_steps=4 format=3 uid="uid://dmncl68xnkey7"]
 
 [ext_resource type="PackedScene" uid="uid://cqr8j1wa376qr" path="res://player.tscn" id="1_824tp"]
-[ext_resource type="PackedScene" uid="uid://cav3ttusei20s" path="res://tree.tscn" id="1_fu78p"]
 [ext_resource type="Script" path="res://game.gd" id="1_sflag"]
 
 [sub_resource type="Curve2D" id="Curve2D_2l25b"]
@@ -23,9 +22,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Tree" parent="." instance=ExtResource("1_fu78p")]
-position = Vector2(640, 585)
 
 [node name="Player" parent="." instance=ExtResource("1_824tp")]
 position = Vector2(971, 543)
